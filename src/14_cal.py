@@ -22,3 +22,14 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+if len(sys.argv) == 3:
+  month = int(sys.argv[1])
+  year = int(sys.argv[2])
+else:
+  month = input("Enter a month: ")
+  month = int(month)
+  year = input("Enter a year: ")
+  year = int(year)
+
+print(calendar.month(year, month))
